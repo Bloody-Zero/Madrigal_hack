@@ -1,0 +1,38 @@
+{
+  "name": "Учебный: AA55 + тип + длина тела",
+  "framing": {
+    "mode": "length",
+    "offset": 3,
+    "width": 2,
+    "endian": "big",
+    "add": 5,
+    "min_size": 5,
+    "max_size": 65541
+  },
+  "fields": [
+    {
+      "name": "marker",
+      "offset": 0,
+      "type": "bytes",
+      "size": 2,
+      "equals": "aa55"
+    },
+    {
+      "name": "command",
+      "offset": 2,
+      "type": "uint8"
+    },
+    {
+      "name": "body_length",
+      "offset": 3,
+      "type": "uint16",
+      "endian": "big"
+    },
+    {
+      "name": "body",
+      "offset": 5,
+      "type": "bytes",
+      "size": "rest"
+    }
+  ]
+}

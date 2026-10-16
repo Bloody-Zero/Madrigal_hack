@@ -1,0 +1,10 @@
+{
+  "training_stream_hex": "aa550100020015aa550100020023aa55020006414243444546",
+  "training_values": [
+    21,
+    35
+  ],
+  "additional_value": 300,
+  "additional_array_length": 260,
+  "fixture_kind": "synthetic Ethernet packet fixtures"
+}

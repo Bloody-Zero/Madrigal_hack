@@ -1,0 +1,14 @@
+ЛАБОРАТОРИЯ ПРОТОКОЛОВ — MVP 0.1
+
+1. Распакуйте весь архив.
+2. Откройте README.md: там команды установки и запуска.
+3. Linux: bash install.sh --system-tools
+          bash run.sh --project ./my-research
+4. Windows: установите Python и Wireshark/TShark, затем install.ps1 и run.ps1.
+   Windows-скрипты ещё не проверены на Windows; готового exe в этой сборке нет.
+5. В браузере добавьте examples/training.pcap и examples/additional.pcap.
+6. Нажмите «Все с данными» и «Проверить корпус»: ожидается 5 успешно разобранных сообщений.
+
+Это рабочая первая версия для проверки и доработки. Полное соответствие ТЗ
+на реальном корпусе и максимальной нагрузке пока не подтверждено.
+Подробности: docs/ARCHITECTURE.md и docs/VALIDATION.md.

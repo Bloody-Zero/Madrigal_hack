@@ -1,0 +1,282 @@
+{
+  "id": "9cb9e431455d419fb9101c8f32f00d53",
+  "created": 1792028776.8495135,
+  "rule_hash": "3865671cf1f3de0233942140df6a99d011854ae939e3fe012626e82981919b08",
+  "source_hashes": [
+    "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+    "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0"
+  ],
+  "stream_ids": [
+    "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+    "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0"
+  ],
+  "counts": {
+    "ok": 5
+  },
+  "seconds": 0.0002497330001460796,
+  "engine_version": "0.1.0",
+  "unknown_bytes": 0,
+  "settings": {
+    "overlap": "first-observed; conflicts not interpreted",
+    "checksum": "warn, do not drop",
+    "time": "packet observation timestamps; action clock offset is explicit"
+  },
+  "rule": {
+    "name": "Учебный: AA55 + тип + длина тела",
+    "framing": {
+      "mode": "length",
+      "offset": 3,
+      "width": 2,
+      "endian": "big",
+      "add": 5,
+      "min_size": 5,
+      "max_size": 65541
+    },
+    "fields": [
+      {
+        "name": "marker",
+        "offset": 0,
+        "type": "bytes",
+        "size": 2,
+        "equals": "aa55"
+      },
+      {
+        "name": "command",
+        "offset": 2,
+        "type": "uint8"
+      },
+      {
+        "name": "body_length",
+        "offset": 3,
+        "type": "uint16",
+        "endian": "big"
+      },
+      {
+        "name": "body",
+        "offset": 5,
+        "type": "bytes",
+        "size": "rest"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "stream_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+      "source_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "rule_hash": "3865671cf1f3de0233942140df6a99d011854ae939e3fe012626e82981919b08",
+      "start": 0,
+      "end": 7,
+      "status": "ok",
+      "errors": [],
+      "fields": [
+        {
+          "name": "marker",
+          "value": "aa55",
+          "type": "bytes",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "name": "command",
+          "value": 1,
+          "type": "uint8",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "name": "body_length",
+          "value": 2,
+          "type": "uint16",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "name": "body",
+          "value": "0015",
+          "type": "bytes",
+          "start": 5,
+          "end": 7
+        }
+      ],
+      "unknown_ranges": []
+    },
+    {
+      "stream_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+      "source_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "rule_hash": "3865671cf1f3de0233942140df6a99d011854ae939e3fe012626e82981919b08",
+      "start": 7,
+      "end": 14,
+      "status": "ok",
+      "errors": [],
+      "fields": [
+        {
+          "name": "marker",
+          "value": "aa55",
+          "type": "bytes",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "name": "command",
+          "value": 1,
+          "type": "uint8",
+          "start": 9,
+          "end": 10
+        },
+        {
+          "name": "body_length",
+          "value": 2,
+          "type": "uint16",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "name": "body",
+          "value": "0023",
+          "type": "bytes",
+          "start": 12,
+          "end": 14
+        }
+      ],
+      "unknown_ranges": []
+    },
+    {
+      "stream_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+      "source_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "rule_hash": "3865671cf1f3de0233942140df6a99d011854ae939e3fe012626e82981919b08",
+      "start": 14,
+      "end": 25,
+      "status": "ok",
+      "errors": [],
+      "fields": [
+        {
+          "name": "marker",
+          "value": "aa55",
+          "type": "bytes",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "name": "command",
+          "value": 2,
+          "type": "uint8",
+          "start": 16,
+          "end": 17
+        },
+        {
+          "name": "body_length",
+          "value": 6,
+          "type": "uint16",
+          "start": 17,
+          "end": 19
+        },
+        {
+          "name": "body",
+          "value": "414243444546",
+          "type": "bytes",
+          "start": 19,
+          "end": 25
+        }
+      ],
+      "unknown_ranges": []
+    },
+    {
+      "stream_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0",
+      "source_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "rule_hash": "3865671cf1f3de0233942140df6a99d011854ae939e3fe012626e82981919b08",
+      "start": 0,
+      "end": 7,
+      "status": "ok",
+      "errors": [],
+      "fields": [
+        {
+          "name": "marker",
+          "value": "aa55",
+          "type": "bytes",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "name": "command",
+          "value": 1,
+          "type": "uint8",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "name": "body_length",
+          "value": 2,
+          "type": "uint16",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "name": "body",
+          "value": "012c",
+          "type": "bytes",
+          "start": 5,
+          "end": 7
+        }
+      ],
+      "unknown_ranges": []
+    },
+    {
+      "stream_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0",
+      "source_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "rule_hash": "3865671cf1f3de0233942140df6a99d011854ae939e3fe012626e82981919b08",
+      "start": 7,
+      "end": 272,
+      "status": "ok",
+      "errors": [],
+      "fields": [
+        {
+          "name": "marker",
+          "value": "aa55",
+          "type": "bytes",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "name": "command",
+          "value": 2,
+          "type": "uint8",
+          "start": 9,
+          "end": 10
+        },
+        {
+          "name": "body_length",
+          "value": 260,
+          "type": "uint16",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "name": "body",
+          "value": "5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a",
+          "type": "bytes",
+          "start": 12,
+          "end": 272
+        }
+      ],
+      "unknown_ranges": []
+    }
+  ],
+  "stream_diagnostics": [
+    {
+      "stream_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+      "start_seen": true,
+      "roles_known": true,
+      "gaps": [],
+      "conflict_ranges": [],
+      "error": null
+    },
+    {
+      "stream_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0",
+      "start_seen": true,
+      "roles_known": true,
+      "gaps": [],
+      "conflict_ranges": [],
+      "error": null
+    }
+  ]
+}

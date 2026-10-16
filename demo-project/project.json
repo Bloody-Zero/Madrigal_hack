@@ -1,0 +1,200 @@
+{
+  "schema": 1,
+  "name": "demo-project",
+  "sources": [
+    {
+      "id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "name": "training.pcap",
+      "path": "sources/53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e.pcap",
+      "sha256": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "size": 469,
+      "packet_count": 6,
+      "import_seconds": 0.5517834530000982,
+      "tshark_version": "TShark (Wireshark) 4.2.2 (Git v4.2.2 packaged as 4.2.2-1.1build3).",
+      "diagnostic_count": 0
+    },
+    {
+      "id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "name": "additional.pcap",
+      "path": "sources/8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0.pcap",
+      "sha256": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "size": 576,
+      "packet_count": 4,
+      "import_seconds": 0.34855452200008585,
+      "tshark_version": "TShark (Wireshark) 4.2.2 (Git v4.2.2 packaged as 4.2.2-1.1build3).",
+      "diagnostic_count": 0
+    }
+  ],
+  "rule": {
+    "name": "Учебный: AA55 + тип + длина тела",
+    "framing": {
+      "mode": "length",
+      "offset": 3,
+      "width": 2,
+      "endian": "big",
+      "add": 5,
+      "min_size": 5,
+      "max_size": 65541
+    },
+    "fields": [
+      {
+        "name": "marker",
+        "offset": 0,
+        "type": "bytes",
+        "size": 2,
+        "equals": "aa55"
+      },
+      {
+        "name": "command",
+        "offset": 2,
+        "type": "uint8"
+      },
+      {
+        "name": "body_length",
+        "offset": 3,
+        "type": "uint16",
+        "endian": "big"
+      },
+      {
+        "name": "body",
+        "offset": 5,
+        "type": "bytes",
+        "size": "rest"
+      }
+    ]
+  },
+  "notes": [
+    {
+      "id": "e56256ccac4748da92dceac5323f9971",
+      "kind": "hypothesis",
+      "text": "После действия set=21 наблюдаются байты 00 15. Гипотеза: параметр команды 1 передаётся uint16 big-endian. Проверить на 35 и 300; к команде 2 смысл не переносим автоматически.",
+      "stream_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+      "source_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "start": 5,
+      "end": 7,
+      "base_seq": 1001,
+      "evidence": [
+        {
+          "frame": 5,
+          "packet_start": 55,
+          "packet_end": 57,
+          "stream_start": 5,
+          "stream_end": 7,
+          "time": "1700000000.004000000"
+        }
+      ],
+      "created": 1792028776.8504956
+    },
+    {
+      "id": "42ad94983ffb4d568d48014509b83e20",
+      "kind": "observation",
+      "text": "В дополнительной записи после set=300 видны 01 2c. Это согласуется с гипотезой uint16 big-endian; универсальность протокола не доказана.",
+      "stream_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0",
+      "source_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "start": 5,
+      "end": 7,
+      "base_seq": 1001,
+      "evidence": [
+        {
+          "frame": 4,
+          "packet_start": 59,
+          "packet_end": 61,
+          "stream_start": 5,
+          "stream_end": 7,
+          "time": "1700000000.003000000"
+        }
+      ],
+      "created": 1792028776.8508446
+    }
+  ],
+  "actions": [
+    {
+      "id": "6208ca9f50564595a7fc8d3565fbaabf",
+      "source_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "original_time": 1700000000.003,
+      "clock_offset": 0.0,
+      "capture_time": 1700000000.003,
+      "action": "set",
+      "value": "21"
+    },
+    {
+      "id": "1e8d4a2db2b44fae8f4e2f0f2af6e8cf",
+      "source_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "original_time": 1700000000.004,
+      "clock_offset": 0.0,
+      "capture_time": 1700000000.004,
+      "action": "set",
+      "value": "35"
+    },
+    {
+      "id": "502d770d2cdc49d6b03e8b1b4b03965f",
+      "source_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "original_time": 1700000000.005,
+      "clock_offset": 0.0,
+      "capture_time": 1700000000.005,
+      "action": "read_array",
+      "value": "6"
+    },
+    {
+      "id": "6da373e0589841baa18874ba0e13d82e",
+      "source_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "original_time": 1700000000.003,
+      "clock_offset": 0.0,
+      "capture_time": 1700000000.003,
+      "action": "set",
+      "value": "300"
+    }
+  ],
+  "runs": [
+    {
+      "id": "9cb9e431455d419fb9101c8f32f00d53",
+      "created": 1792028776.8495135,
+      "rule_hash": "3865671cf1f3de0233942140df6a99d011854ae939e3fe012626e82981919b08",
+      "source_hashes": [
+        "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+        "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0"
+      ],
+      "stream_ids": [
+        "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+        "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0"
+      ],
+      "counts": {
+        "ok": 5
+      },
+      "seconds": 0.0002497330001460796,
+      "engine_version": "0.1.0",
+      "unknown_bytes": 0,
+      "settings": {
+        "overlap": "first-observed; conflicts not interpreted",
+        "checksum": "warn, do not drop",
+        "time": "packet observation timestamps; action clock offset is explicit"
+      }
+    },
+    {
+      "id": "fcf2a696976244c4998b67cc55d38f0d",
+      "created": 1792028776.8471565,
+      "rule_hash": "3cfae5298a7b44379aa39c2a008495c7eccf08d4ecb1450412d43cb574ccc7a7",
+      "source_hashes": [
+        "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+        "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0"
+      ],
+      "stream_ids": [
+        "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+        "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0"
+      ],
+      "counts": {
+        "ok": 2,
+        "incomplete": 2,
+        "violation": 2
+      },
+      "seconds": 0.0002473609997650783,
+      "engine_version": "0.1.0",
+      "unknown_bytes": 102,
+      "settings": {
+        "overlap": "first-observed; conflicts not interpreted",
+        "checksum": "warn, do not drop",
+        "time": "packet observation timestamps; action clock offset is explicit"
+      }
+    }
+  ]
+}

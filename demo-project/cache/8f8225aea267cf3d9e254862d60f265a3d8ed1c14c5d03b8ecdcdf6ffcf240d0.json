@@ -1,0 +1,152 @@
+{
+  "capture": {
+    "packets": [
+      {
+        "frame": 1,
+        "time": "1700000000.000000000",
+        "wire_length": 54,
+        "captured_length": 54,
+        "stream": "0",
+        "src": "192.0.2.10",
+        "dst": "192.0.2.20",
+        "sport": 53024,
+        "dport": 9000,
+        "seq": 1000,
+        "ack": 0,
+        "flags": 2,
+        "expected_length": 0,
+        "payload": "",
+        "payload_offset": 54,
+        "raw": "020000000002020000000001080045000028000140004006b6b0c000020ac0000214cf202328000003e8000000005002ffff35930000",
+        "checksum": "1"
+      },
+      {
+        "frame": 2,
+        "time": "1700000000.001000000",
+        "wire_length": 54,
+        "captured_length": 54,
+        "stream": "0",
+        "src": "192.0.2.20",
+        "dst": "192.0.2.10",
+        "sport": 9000,
+        "dport": 53024,
+        "seq": 9000,
+        "ack": 1001,
+        "flags": 18,
+        "expected_length": 0,
+        "payload": "",
+        "payload_offset": 54,
+        "raw": "020000000002020000000001080045000028000140004006b6b0c0000214c000020a2328cf2000002328000003e95012ffff125a0000",
+        "checksum": "1"
+      },
+      {
+        "frame": 3,
+        "time": "1700000000.002000000",
+        "wire_length": 54,
+        "captured_length": 54,
+        "stream": "0",
+        "src": "192.0.2.10",
+        "dst": "192.0.2.20",
+        "sport": 53024,
+        "dport": 9000,
+        "seq": 1001,
+        "ack": 9001,
+        "flags": 16,
+        "expected_length": 0,
+        "payload": "",
+        "payload_offset": 54,
+        "raw": "020000000002020000000001080045000028000140004006b6b0c000020ac0000214cf202328000003e9000023295010ffff125b0000",
+        "checksum": "1"
+      },
+      {
+        "frame": 4,
+        "time": "1700000000.003000000",
+        "wire_length": 326,
+        "captured_length": 326,
+        "stream": "0",
+        "src": "192.0.2.10",
+        "dst": "192.0.2.20",
+        "sport": 53024,
+        "dport": 9000,
+        "seq": 1001,
+        "ack": 9001,
+        "flags": 24,
+        "expected_length": 272,
+        "payload": "aa55010002012caa550201045a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a",
+        "payload_offset": 54,
+        "raw": "020000000002020000000001080045000138000140004006b5a0c000020ac0000214cf202328000003e9000023295018ffffff590000aa55010002012caa550201045a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a",
+        "checksum": "1"
+      }
+    ],
+    "diagnostics": [],
+    "packet_count": 4,
+    "tshark_version": "TShark (Wireshark) 4.2.2 (Git v4.2.2 packaged as 4.2.2-1.1build3).",
+    "checksum_policy": "Проверять и предупреждать; не отбрасывать автоматически. Возможен offloading."
+  },
+  "streams": [
+    {
+      "id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0",
+      "source_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "session": "0",
+      "direction": 0,
+      "from": [
+        "192.0.2.10",
+        53024
+      ],
+      "to": [
+        "192.0.2.20",
+        9000
+      ],
+      "roles_known": true,
+      "start_seen": true,
+      "base_seq": 1001,
+      "length": 272,
+      "packet_count": 3,
+      "policy": "first-observed; конфликтные байты не интерпретируются",
+      "error": null,
+      "hex": "aa55010002012caa550201045a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a",
+      "known": "0101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101",
+      "conflicts": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "provenance": [
+        {
+          "frame": 4,
+          "start": 0,
+          "end": 272,
+          "expected_end": 272,
+          "packet_offset": 54,
+          "time": "1700000000.003000000"
+        }
+      ],
+      "gaps": [],
+      "conflict_ranges": []
+    },
+    {
+      "id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:1",
+      "source_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "session": "0",
+      "direction": 1,
+      "from": [
+        "192.0.2.20",
+        9000
+      ],
+      "to": [
+        "192.0.2.10",
+        53024
+      ],
+      "roles_known": true,
+      "start_seen": true,
+      "base_seq": 9001,
+      "length": 0,
+      "packet_count": 1,
+      "policy": "first-observed; конфликтные байты не интерпретируются",
+      "error": null,
+      "hex": "",
+      "known": "",
+      "conflicts": "",
+      "provenance": [],
+      "gaps": [],
+      "conflict_ranges": []
+    }
+  ],
+  "engine_version": "0.1.0"
+}

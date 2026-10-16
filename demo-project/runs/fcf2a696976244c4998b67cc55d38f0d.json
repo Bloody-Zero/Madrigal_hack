@@ -1,0 +1,284 @@
+{
+  "id": "fcf2a696976244c4998b67cc55d38f0d",
+  "created": 1792028776.8471565,
+  "rule_hash": "3cfae5298a7b44379aa39c2a008495c7eccf08d4ecb1450412d43cb574ccc7a7",
+  "source_hashes": [
+    "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+    "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0"
+  ],
+  "stream_ids": [
+    "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+    "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0"
+  ],
+  "counts": {
+    "ok": 2,
+    "incomplete": 2,
+    "violation": 2
+  },
+  "seconds": 0.0002473609997650783,
+  "engine_version": "0.1.0",
+  "unknown_bytes": 102,
+  "settings": {
+    "overlap": "first-observed; conflicts not interpreted",
+    "checksum": "warn, do not drop",
+    "time": "packet observation timestamps; action clock offset is explicit"
+  },
+  "rule": {
+    "name": "Гипотеза: поле длины занимает 1 байт",
+    "framing": {
+      "mode": "length",
+      "offset": 3,
+      "width": 1,
+      "endian": "big",
+      "add": 5,
+      "min_size": 5,
+      "max_size": 65541
+    },
+    "fields": [
+      {
+        "name": "marker",
+        "offset": 0,
+        "type": "bytes",
+        "size": 2,
+        "equals": "aa55"
+      },
+      {
+        "name": "command",
+        "offset": 2,
+        "type": "uint8"
+      },
+      {
+        "name": "body_length",
+        "offset": 3,
+        "type": "uint16",
+        "endian": "big"
+      },
+      {
+        "name": "body",
+        "offset": 5,
+        "type": "bytes",
+        "size": "rest"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "stream_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+      "source_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "rule_hash": "3cfae5298a7b44379aa39c2a008495c7eccf08d4ecb1450412d43cb574ccc7a7",
+      "start": 0,
+      "end": 5,
+      "status": "ok",
+      "errors": [],
+      "fields": [
+        {
+          "name": "marker",
+          "value": "aa55",
+          "type": "bytes",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "name": "command",
+          "value": 1,
+          "type": "uint8",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "name": "body_length",
+          "value": 2,
+          "type": "uint16",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "name": "body",
+          "value": "",
+          "type": "bytes",
+          "start": 5,
+          "end": 5
+        }
+      ],
+      "unknown_ranges": []
+    },
+    {
+      "stream_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+      "source_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "rule_hash": "3cfae5298a7b44379aa39c2a008495c7eccf08d4ecb1450412d43cb574ccc7a7",
+      "start": 5,
+      "end": 25,
+      "status": "incomplete",
+      "errors": [
+        "Сообщение неполно; значения не извлечены"
+      ],
+      "fields": [],
+      "unknown_ranges": [
+        [
+          5,
+          25
+        ]
+      ]
+    },
+    {
+      "stream_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0",
+      "source_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "rule_hash": "3cfae5298a7b44379aa39c2a008495c7eccf08d4ecb1450412d43cb574ccc7a7",
+      "start": 0,
+      "end": 5,
+      "status": "ok",
+      "errors": [],
+      "fields": [
+        {
+          "name": "marker",
+          "value": "aa55",
+          "type": "bytes",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "name": "command",
+          "value": 1,
+          "type": "uint8",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "name": "body_length",
+          "value": 2,
+          "type": "uint16",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "name": "body",
+          "value": "",
+          "type": "bytes",
+          "start": 5,
+          "end": 5
+        }
+      ],
+      "unknown_ranges": []
+    },
+    {
+      "stream_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0",
+      "source_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "rule_hash": "3cfae5298a7b44379aa39c2a008495c7eccf08d4ecb1450412d43cb574ccc7a7",
+      "start": 5,
+      "end": 95,
+      "status": "violation",
+      "errors": [
+        "marker: '012c' != 'aa55'"
+      ],
+      "fields": [
+        {
+          "name": "marker",
+          "value": "012c",
+          "type": "bytes",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "name": "command",
+          "value": 170,
+          "type": "uint8",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "name": "body_length",
+          "value": 21762,
+          "type": "uint16",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "name": "body",
+          "value": "01045a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a",
+          "type": "bytes",
+          "start": 10,
+          "end": 95
+        }
+      ],
+      "unknown_ranges": []
+    },
+    {
+      "stream_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0",
+      "source_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "rule_hash": "3cfae5298a7b44379aa39c2a008495c7eccf08d4ecb1450412d43cb574ccc7a7",
+      "start": 95,
+      "end": 190,
+      "status": "violation",
+      "errors": [
+        "marker: '5a5a' != 'aa55'"
+      ],
+      "fields": [
+        {
+          "name": "marker",
+          "value": "5a5a",
+          "type": "bytes",
+          "start": 95,
+          "end": 97
+        },
+        {
+          "name": "command",
+          "value": 90,
+          "type": "uint8",
+          "start": 97,
+          "end": 98
+        },
+        {
+          "name": "body_length",
+          "value": 23130,
+          "type": "uint16",
+          "start": 98,
+          "end": 100
+        },
+        {
+          "name": "body",
+          "value": "5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a",
+          "type": "bytes",
+          "start": 100,
+          "end": 190
+        }
+      ],
+      "unknown_ranges": []
+    },
+    {
+      "stream_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0",
+      "source_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0",
+      "rule_hash": "3cfae5298a7b44379aa39c2a008495c7eccf08d4ecb1450412d43cb574ccc7a7",
+      "start": 190,
+      "end": 272,
+      "status": "incomplete",
+      "errors": [
+        "Сообщение неполно; значения не извлечены"
+      ],
+      "fields": [],
+      "unknown_ranges": [
+        [
+          190,
+          272
+        ]
+      ]
+    }
+  ],
+  "stream_diagnostics": [
+    {
+      "stream_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+      "start_seen": true,
+      "roles_known": true,
+      "gaps": [],
+      "conflict_ranges": [],
+      "error": null
+    },
+    {
+      "stream_id": "8f8225aea267cf3d9e254862d60f265a3d8ed1c14c5d03b8ecdcdf6ffcf240d0:0:0",
+      "start_seen": true,
+      "roles_known": true,
+      "gaps": [],
+      "conflict_ranges": [],
+      "error": null
+    }
+  ]
+}

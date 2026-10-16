@@ -1,0 +1,206 @@
+{
+  "capture": {
+    "packets": [
+      {
+        "frame": 1,
+        "time": "1700000000.000000000",
+        "wire_length": 54,
+        "captured_length": 54,
+        "stream": "0",
+        "src": "192.0.2.10",
+        "dst": "192.0.2.20",
+        "sport": 53024,
+        "dport": 9000,
+        "seq": 1000,
+        "ack": 0,
+        "flags": 2,
+        "expected_length": 0,
+        "payload": "",
+        "payload_offset": 54,
+        "raw": "020000000002020000000001080045000028000140004006b6b0c000020ac0000214cf202328000003e8000000005002ffff35930000",
+        "checksum": "1"
+      },
+      {
+        "frame": 2,
+        "time": "1700000000.001000000",
+        "wire_length": 54,
+        "captured_length": 54,
+        "stream": "0",
+        "src": "192.0.2.20",
+        "dst": "192.0.2.10",
+        "sport": 9000,
+        "dport": 53024,
+        "seq": 9000,
+        "ack": 1001,
+        "flags": 18,
+        "expected_length": 0,
+        "payload": "",
+        "payload_offset": 54,
+        "raw": "020000000002020000000001080045000028000140004006b6b0c0000214c000020a2328cf2000002328000003e95012ffff125a0000",
+        "checksum": "1"
+      },
+      {
+        "frame": 3,
+        "time": "1700000000.002000000",
+        "wire_length": 54,
+        "captured_length": 54,
+        "stream": "0",
+        "src": "192.0.2.10",
+        "dst": "192.0.2.20",
+        "sport": 53024,
+        "dport": 9000,
+        "seq": 1001,
+        "ack": 9001,
+        "flags": 16,
+        "expected_length": 0,
+        "payload": "",
+        "payload_offset": 54,
+        "raw": "020000000002020000000001080045000028000140004006b6b0c000020ac0000214cf202328000003e9000023295010ffff125b0000",
+        "checksum": "1"
+      },
+      {
+        "frame": 4,
+        "time": "1700000000.003000000",
+        "wire_length": 58,
+        "captured_length": 58,
+        "stream": "0",
+        "src": "192.0.2.10",
+        "dst": "192.0.2.20",
+        "sport": 53024,
+        "dport": 9000,
+        "seq": 1001,
+        "ack": 9001,
+        "flags": 24,
+        "expected_length": 4,
+        "payload": "aa550100",
+        "payload_offset": 54,
+        "raw": "02000000000202000000000108004500002c000140004006b6acc000020ac0000214cf202328000003e9000023295018ffff66f90000aa550100",
+        "checksum": "1"
+      },
+      {
+        "frame": 5,
+        "time": "1700000000.004000000",
+        "wire_length": 62,
+        "captured_length": 62,
+        "stream": "0",
+        "src": "192.0.2.10",
+        "dst": "192.0.2.20",
+        "sport": 53024,
+        "dport": 9000,
+        "seq": 1005,
+        "ack": 9001,
+        "flags": 24,
+        "expected_length": 8,
+        "payload": "020015aa55010002",
+        "payload_offset": 54,
+        "raw": "020000000002020000000001080045000030000140004006b6a8c000020ac0000214cf202328000003ed000023295018ffffa5990000020015aa55010002",
+        "checksum": "1"
+      },
+      {
+        "frame": 6,
+        "time": "1700000000.005000000",
+        "wire_length": 67,
+        "captured_length": 67,
+        "stream": "0",
+        "src": "192.0.2.10",
+        "dst": "192.0.2.20",
+        "sport": 53024,
+        "dport": 9000,
+        "seq": 1013,
+        "ack": 9001,
+        "flags": 24,
+        "expected_length": 13,
+        "payload": "0023aa55020006414243444546",
+        "payload_offset": 54,
+        "raw": "020000000002020000000001080045000035000140004006b6a3c000020ac0000214cf202328000003f5000023295018ffff92f700000023aa55020006414243444546",
+        "checksum": "1"
+      }
+    ],
+    "diagnostics": [],
+    "packet_count": 6,
+    "tshark_version": "TShark (Wireshark) 4.2.2 (Git v4.2.2 packaged as 4.2.2-1.1build3).",
+    "checksum_policy": "Проверять и предупреждать; не отбрасывать автоматически. Возможен offloading."
+  },
+  "streams": [
+    {
+      "id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:0",
+      "source_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "session": "0",
+      "direction": 0,
+      "from": [
+        "192.0.2.10",
+        53024
+      ],
+      "to": [
+        "192.0.2.20",
+        9000
+      ],
+      "roles_known": true,
+      "start_seen": true,
+      "base_seq": 1001,
+      "length": 25,
+      "packet_count": 5,
+      "policy": "first-observed; конфликтные байты не интерпретируются",
+      "error": null,
+      "hex": "aa550100020015aa550100020023aa55020006414243444546",
+      "known": "01010101010101010101010101010101010101010101010101",
+      "conflicts": "00000000000000000000000000000000000000000000000000",
+      "provenance": [
+        {
+          "frame": 4,
+          "start": 0,
+          "end": 4,
+          "expected_end": 4,
+          "packet_offset": 54,
+          "time": "1700000000.003000000"
+        },
+        {
+          "frame": 5,
+          "start": 4,
+          "end": 12,
+          "expected_end": 12,
+          "packet_offset": 54,
+          "time": "1700000000.004000000"
+        },
+        {
+          "frame": 6,
+          "start": 12,
+          "end": 25,
+          "expected_end": 25,
+          "packet_offset": 54,
+          "time": "1700000000.005000000"
+        }
+      ],
+      "gaps": [],
+      "conflict_ranges": []
+    },
+    {
+      "id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e:0:1",
+      "source_id": "53c9e884cef9595e0b2cf9c89f394c0bc630f0fda1d42be73113a2c8fdb5d44e",
+      "session": "0",
+      "direction": 1,
+      "from": [
+        "192.0.2.20",
+        9000
+      ],
+      "to": [
+        "192.0.2.10",
+        53024
+      ],
+      "roles_known": true,
+      "start_seen": true,
+      "base_seq": 9001,
+      "length": 0,
+      "packet_count": 1,
+      "policy": "first-observed; конфликтные байты не интерпретируются",
+      "error": null,
+      "hex": "",
+      "known": "",
+      "conflicts": "",
+      "provenance": [],
+      "gaps": [],
+      "conflict_ranges": []
+    }
+  ],
+  "engine_version": "0.1.0"
+}
